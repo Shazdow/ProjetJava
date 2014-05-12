@@ -3,14 +3,17 @@ import java.io.FileOutputStream;
 
 
 
+
+
 import com.lowagie.text.Document;
 import com.lowagie.text.DocumentException;
 import com.lowagie.text.Paragraph;
 import com.lowagie.text.pdf.PdfWriter;
 
 public class Itext extends interieurContrat{
-
-	public void run(graph gr) 
+	
+	
+	public void run(graph gr, interieurContrat inte) 
 	{
 		//test
 		//creation doc
@@ -22,19 +25,19 @@ public class Itext extends interieurContrat{
 		//ouverture
 		document.open();
 		//ajout item
-		populate(document,gr);
-	}
-	catch(Exception e){
-	// fail
-	System.err.println(e);
-	}
+		populate(document, gr, inte);
+		}
+		catch(Exception e){
+		// fail
+		System.err.println(e);
+		}
+		
+		finally{
+			document.close();
+		}
 	
-	finally{
-		document.close();
 	}
-	
-	}
-	private void populate(Document document, graph gr) throws DocumentException {
+	private void populate(Document document, graph gr, interieurContrat inte) throws DocumentException {
 		// TODO Auto-generated method stub
 		//add paragraphe
 		
@@ -56,7 +59,8 @@ public class Itext extends interieurContrat{
 			+"\n",
 			
 			/*3*/
-			this.getText()
+			// todo interface
+			inte.getTextmid()
 			+"\n",
 			
 			/*4*/

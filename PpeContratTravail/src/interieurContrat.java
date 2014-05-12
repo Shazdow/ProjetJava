@@ -1,16 +1,17 @@
 
 public class interieurContrat extends graph{
 	
-	//private String textDebut;
-	private String text;
+	public String textmid;
 	
 	public void remplissageContrat(graph gr)
 	{
-		/*if(gr.getComboBox() == "CDI"){*/
+		if(gr.getComboBox() == "CDI"){
 			
-			text = 		
+			textmid = 		
 			"\n Il est arrêté et convenu ce qui suit :\n"
+			+"\n\n"
 			+"Date d’embauche et nature du contrat\n ,"
+			+"\n\n"
 			+"La maison des ligues de Lorraine engage M/MELLE/MME" +gr.getNom().getText()+ " à compter du " + gr.getQuand().getText()+" dans le cadre d’un contrat de travail à," 
 			+"durée indéterminée." 
 			+"\n\n"
@@ -18,7 +19,7 @@ public class interieurContrat extends graph{
 			+"\n"
 			+"Cet engagement est conclu sous réserve d’une période d’essai de " + gr.getEssai().getText() +"  mois," 
 			+"durant laquelle il pourra prendre fin à la volonté de l’une ou de "
-			+"l’autre des parties à tout moment sans préavis, ni indemnité. ,"
+			+"l’autre des parties à tout moment sans préavis, ni indemnité."
 			+"La période d’essai, conformément à la convention collective nationale du sport, pourra être "
 			+"renouvelée. Ce renouvellement sera motivé et signifié par écrit. "
 			+"\n\n"
@@ -29,7 +30,7 @@ public class interieurContrat extends graph{
 			+"\n\n"
 			+"Durée et horaires de travail\n"
 			+"\nM/MME" +gr.getNom().getText()+ " est tenu d’effectuer une durée hebdomadaire de travail de 35h." 
-			+"M/MME" +gr.getNom().getText()+ "est soumis aux horaires en vigueur dans l’entreprise. Ces horaires ne "
+			+"M/MME" +gr.getNom().getText()+ " est soumis(e) aux horaires en vigueur dans l’entreprise. Ces horaires ne "
 			+"constituent pas un élément essentiel du présent contrat, et pourront en conséquence, être "
 			+"modifiés en fonction de l’organisation de l’entreprise et des nécessités de service. "
 			+"M/MME" +gr.getNom().getText()+ " pourra être amené à effectuer des heures supplémentaires, à la demande de "
@@ -52,18 +53,18 @@ public class interieurContrat extends graph{
 			+"Le jour de repos hebdomadaire est fixé le dimanche. "
 			+"M/MME "+gr.getNom().getText()+" pourra cependant être amené à travailler de manière exceptionnelle le "
 			+"dimanche.\n "
-			+"Les heures effectuées seront alors rémunérées ou récupérées conformément à l’article" 
+			+"Les heures effectuées seront alors rémunérées ou récupérées conformément à l’article " 
 			+"5.1.4.2 de la convention collective nationale du sport.";
-			}
-		/*
+			
+		}
 		if(gr.getComboBox() == "CDD"){
 				
-			text ="Engagement\n"
+			textmid ="Engagement\n"
 			+"\n"
 			+"Le salarié est engagé en vue d'assurer les fonctions temporaires "
-			+"suivantes "+gr.getFonction().getText() +" pour lesquelles il est "
+			+"suivantes :"+gr.getFonction().getText() +" pour lesquelles il est "
 			+"d'usage constant de ne pas recourir à un contrat à durée indéterminée."
-			+"Ce contrat prend effet à compter du "+ gr.getQuand().getText()+". Il est conclu pour la durée suivante"+ getDuree() +"semaines\n"
+			+"Ce contrat prend effet à compter du "+ gr.getQuand().getText()+". Il est conclu pour la durée suivante"+ gr.getDuree().getText() +"semaines\n"
 			+"Fonctions et attributions\n"
 			+"Le salarié est engagé en qualité de "+ gr.getFonction().getText()+"\n"
 			+"\n"
@@ -79,7 +80,7 @@ public class interieurContrat extends graph{
 			+"\n"
 			+"Lieu du contrat\n"
 			+"\n"
-			+"Le salarié exercera ses fonctions au siège social de l'entreprise situé à "+ getLieuDeTravail()+".\n"
+			+"Le salarié exercera ses fonctions au siège social de l'entreprise situé à "+ gr.getLieuDeTravail().getText()+".\n"
 			+"\n"
 			+" Rémunération\n"
 			+"\n"
@@ -99,26 +100,27 @@ public class interieurContrat extends graph{
 			+"\n"
 			;
 			}
-		
-		if(gr.getComboBox() == "ALTERNANCE")
-		text = "";	
-		}
-	
+			if(gr.getComboBox() == "STAGE"){
+				textmid = "";
+			}
+			
+			if(gr.getComboBox() == "INTERIM/TEMPORAIRE"){
+				textmid = "Article 1 – Objet du contrat\n\n"
+						+"Le présent contrat est proposé à "+ gr.getNom().getText()+ " , qui l’accepte, en qualité de personnel temporaire"
+						+"pour assurer les fonctions de "+gr.getFonction().getText()+" .\n\n"
+						+"Article 2 – Durée du contrat, période probatoire et résiliation\n\n"
+						+ "Le présent contrat est conclu pour la période du " +gr.getQuand().getText()+ " pour une durée de "+gr.getDuree().getText()+ "."
+						+ "";
+			}
+	}
 	// getter setter
-	/*public String getTextDebut() {
-		return textDebut;
+
+	public String getTextmid() {
+		return textmid;
 	}
 
-	public void setTextDebut(String textDebut) {
-		this.textDebut = textDebut;
-	}
-*/
-	public String getText() {
-		return text;
-	}
-
-	public void setText(String text) {
-		this.text = text;
+	public void setTextmid(String textmid) {
+		this.textmid = textmid;
 	}
 
 }

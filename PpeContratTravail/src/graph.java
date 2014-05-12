@@ -139,7 +139,7 @@ public class graph extends javax.swing.JFrame implements ActionListener {
 			}
 			{
 				ComboBoxModel contratComboModel = new DefaultComboBoxModel(
-				new String[] { "CDD", "CDI", "INTERIM", "ALTERNANCE" });
+				new String[] { "CDD", "CDI", "INTERIM/TEMPORAIRE", "STAGE" });
 				contratCombo = new JComboBox();
 				contratCombo.setModel(contratComboModel);
 				contratCombo.getSelectedItem().toString();
@@ -439,15 +439,18 @@ public class graph extends javax.swing.JFrame implements ActionListener {
 			
 			Itext app = new Itext();
 			
-			app.run(this);
 			app.remplissageContrat(this);
+			app.run(this, app);
+			
+			
 			try {
 				Desktop d = Desktop.getDesktop();
 				d.open(new File(this.getNom().getText()+".pdf"));
 			} catch (IOException f) {
 				// TODO Auto-generated catch block
 				f.printStackTrace();
-			}			
+			}
+			System.out.println();
 		}
 		if(e.getSource() == annulerButton){
 			runGraph();
