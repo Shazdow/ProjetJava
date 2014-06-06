@@ -12,7 +12,9 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JComponent;
 import javax.swing.JEditorPane;
+import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.LayoutStyle;
 import javax.swing.SwingConstants;
@@ -42,7 +44,22 @@ public class graph extends javax.swing.JFrame implements ActionListener {
 	private JTextField dureejours;
 	private JComboBox contratCombo;
 	private JTextField lieu;
-	private JEditorPane jEditorPane1;
+	private JLabel jLabel9;
+	private JLabel jLabel8;
+	private JLabel jLabel7;
+	private JLabel horaire;
+	private JLabel jLabel6;
+	private JLabel jLabel5;
+	private JLabel jLabel2;
+	private JLabel numss;
+	private JLabel jLabel4;
+	private JLabel codep;
+	private JLabel numero;
+	private JLabel jLabel3;
+	private JLabel nationalité;
+	private JLabel jLabel1;
+	private JLabel Duree;
+	private JLabel periodeEssai;
 	private JTextField horraire;
 	private JTextField conges;
 	private JTextField salaire;
@@ -145,8 +162,68 @@ public class graph extends javax.swing.JFrame implements ActionListener {
 				contratCombo.getSelectedItem().toString();
 			}
 			{
-				jEditorPane1 = new JEditorPane();
-				jEditorPane1.setText("duree ");
+				periodeEssai = new JLabel();
+				periodeEssai.setText("Période essai");
+			}
+			{
+				Duree = new JLabel();
+				Duree.setText("Durée");
+			}
+			{
+				jLabel1 = new JLabel();
+				jLabel1.setText("Prénom");
+			}
+			{
+				jLabel2 = new JLabel();
+				jLabel2.setText("Nom");
+			}
+			{
+				nationalité = new JLabel();
+				nationalité.setText("nationalité");
+			}
+			{
+				numss = new JLabel();
+				numss.setText("numero Sécurité");
+			}
+			{
+				jLabel3 = new JLabel();
+				jLabel3.setText("adresse");
+			}
+			{
+				numero = new JLabel();
+				numero.setText("numero Rue");
+			}
+			{
+				codep = new JLabel();
+				codep.setText("code postal");
+			}
+			{
+				jLabel4 = new JLabel();
+				jLabel4.setText("début");
+			}
+			{
+				jLabel5 = new JLabel();
+				jLabel5.setText("fonction");
+			}
+			{
+				jLabel6 = new JLabel();
+				jLabel6.setText("salaire");
+			}
+			{
+				horaire = new JLabel();
+				horaire.setText("horaire");
+			}
+			{
+				jLabel7 = new JLabel();
+				jLabel7.setText("congés");
+			}
+			{
+				jLabel8 = new JLabel();
+				jLabel8.setText("repos");
+			}
+			{
+				jLabel9 = new JLabel();
+				jLabel9.setText("lieu");
 			}
 			{
 				horraire = new JTextField();
@@ -179,115 +256,180 @@ public class graph extends javax.swing.JFrame implements ActionListener {
 			{
 				nss = new JTextField();
 				nss.setText("numero Sécurité Social");
-			}
 			thisLayout.setVerticalGroup(thisLayout.createSequentialGroup()
-				.addContainerGap(18, 18)
+				.addContainerGap(16, 16)
 				.addGroup(thisLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-				    .addComponent(nom, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
 				    .addComponent(prenom, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
 				    .addComponent(debut, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
-				    .addComponent(lieu, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE))
+				    .addComponent(jLabel1, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+				    .addComponent(jLabel4, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE))
+				.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+				.addGroup(thisLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+				    .addComponent(fonction, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+				    .addComponent(nom, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+				    .addComponent(jLabel2, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+				    .addComponent(jLabel5, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE))
+				.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+				.addGroup(thisLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+				    .addComponent(salaire, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+				    .addComponent(nationalite, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+				    .addComponent(nationalité, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+				    .addComponent(jLabel6, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE))
+				.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+				.addGroup(thisLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+				    .addComponent(nss, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE)
+				    .addComponent(horraire, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+				    .addComponent(numss, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE)
+				    .addComponent(horaire, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE))
 				.addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
 				.addGroup(thisLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-				    .addComponent(repos, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
-				    .addComponent(fonction, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
-				    .addComponent(nationalite, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE))
-				.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+				    .addComponent(conges, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+				    .addComponent(jLabel7, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE))
 				.addGroup(thisLayout.createParallelGroup()
 				    .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
-				        .addGroup(thisLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-				            .addComponent(salaire, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
-				            .addComponent(conges, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE))
+				        .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
 				        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-				        .addComponent(horraire, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE))
-				    .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
-				        .addGap(11)
-				        .addComponent(nss, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE)
-				        .addGap(21)))
-				.addComponent(adresse, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
-				.addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-				.addGroup(thisLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-				    .addComponent(numeroRue, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
-				    .addComponent(cp, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE))
-				.addComponent(periodeessai, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
-				.addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+				        .addComponent(adresse, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+				        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+				        .addGroup(thisLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+				            .addComponent(numeroRue, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+				            .addComponent(numero, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)))
+				    .addGroup(thisLayout.createSequentialGroup()
+				        .addGap(12)
+				        .addGroup(thisLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+				            .addComponent(repos, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+				            .addComponent(jLabel8, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE))
+				        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+				        .addGroup(thisLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+				            .addComponent(lieu, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+				            .addComponent(jLabel9, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE))
+				        .addGap(16)))
+				.addGroup(thisLayout.createParallelGroup()
+				    .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+				        .addComponent(periodeessai, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+				        .addComponent(periodeEssai, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE))
+				    .addGroup(thisLayout.createSequentialGroup()
+				        .addGap(10)
+				        .addGroup(thisLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+				            .addComponent(cp, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+				            .addComponent(codep, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE))))
+				.addGap(16)
 				.addGroup(thisLayout.createParallelGroup()
 				    .addComponent(dureejours, GroupLayout.Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 24, GroupLayout.PREFERRED_SIZE)
-				    .addComponent(jEditorPane1, GroupLayout.Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 24, GroupLayout.PREFERRED_SIZE))
-				.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 0, Short.MAX_VALUE)
+				    .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
+				        .addGap(8)
+				        .addComponent(Duree, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)))
 				.addComponent(contratCombo, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
-				.addGap(0, 39, GroupLayout.PREFERRED_SIZE)
 				.addGroup(thisLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
 				    .addComponent(annulerButton, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
 				    .addComponent(validerButton, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE))
-				.addContainerGap(63, 63));
+				.addContainerGap(40, 40));
 			thisLayout.setHorizontalGroup(thisLayout.createSequentialGroup()
 				.addGap(7)
 				.addGroup(thisLayout.createParallelGroup()
-				    .addGroup(thisLayout.createSequentialGroup()
-				        .addGroup(thisLayout.createParallelGroup()
-				            .addComponent(numeroRue, GroupLayout.Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
-				            .addComponent(nationalite, GroupLayout.Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
-				            .addComponent(nom, GroupLayout.Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE))
-				        .addGap(19)
-				        .addGroup(thisLayout.createParallelGroup()
-				            .addComponent(cp, GroupLayout.Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE)
-				            .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
-				                .addPreferredGap(cp, prenom, LayoutStyle.ComponentPlacement.INDENT)
-				                .addComponent(prenom, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
-				                .addGap(42))))
-				    .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
-				        .addComponent(nss, GroupLayout.PREFERRED_SIZE, 145, GroupLayout.PREFERRED_SIZE)
-				        .addGap(134))
 				    .addComponent(adresse, GroupLayout.Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 279, GroupLayout.PREFERRED_SIZE)
 				    .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
-				        .addGap(95)
-				        .addComponent(contratCombo, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
-				        .addGap(66)))
-				.addGap(66)
-				.addGroup(thisLayout.createParallelGroup()
-				    .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
-				        .addGap(0, 0, Short.MAX_VALUE)
-				        .addComponent(salaire, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
-				        .addGap(134))
-				    .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
-				        .addGap(0, 0, Short.MAX_VALUE)
-				        .addComponent(horraire, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
-				        .addGap(134))
-				    .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
-				        .addGap(0, 0, Short.MAX_VALUE)
-				        .addComponent(fonction, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
-				        .addGap(134))
-				    .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
-				        .addGap(0, 0, Short.MAX_VALUE)
-				        .addComponent(debut, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
-				        .addGap(134))
-				    .addGroup(thisLayout.createSequentialGroup()
-				        .addGap(26)
+				        .addComponent(numss, 0, 103, Short.MAX_VALUE)
+				        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
 				        .addGroup(thisLayout.createParallelGroup()
 				            .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
-				                .addGap(0, 0, Short.MAX_VALUE)
-				                .addComponent(jEditorPane1, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
-				                .addGap(12)
-				                .addGroup(thisLayout.createParallelGroup()
-				                    .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
-				                        .addComponent(periodeessai, GroupLayout.PREFERRED_SIZE, 150, GroupLayout.PREFERRED_SIZE)
-				                        .addGap(11))
-				                    .addComponent(dureejours, GroupLayout.Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 161, GroupLayout.PREFERRED_SIZE)))
+				                .addComponent(numeroRue, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
+				                .addGap(54))
+				            .addComponent(cp, GroupLayout.Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE)
 				            .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
-				                .addGap(0, 25, Short.MAX_VALUE)
+				                .addComponent(nss, GroupLayout.PREFERRED_SIZE, 145, GroupLayout.PREFERRED_SIZE)
+				                .addGap(12))
+				            .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
+				                .addComponent(nationalite, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
+				                .addGap(54))
+				            .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
+				                .addComponent(nom, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
+				                .addGap(54))
+				            .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
+				                .addComponent(prenom, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
+				                .addGap(54)))
+				        .addGap(19))
+				    .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
+				        .addGroup(thisLayout.createParallelGroup()
+				            .addComponent(codep, GroupLayout.Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 75, GroupLayout.PREFERRED_SIZE)
+				            .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
+				                .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
+				                .addGap(10))
+				            .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
+				                .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
+				                .addGap(38))
+				            .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
+				                .addComponent(nationalité, GroupLayout.PREFERRED_SIZE, 68, GroupLayout.PREFERRED_SIZE)
+				                .addGap(7))
+				            .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
+				                .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+				                .addGap(15))
+				            .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
+				                .addComponent(numero, GroupLayout.PREFERRED_SIZE, 68, GroupLayout.PREFERRED_SIZE)
+				                .addGap(7)))
+				        .addComponent(contratCombo, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
+				        .addGap(86)))
+				.addGap(23)
+				.addGroup(thisLayout.createParallelGroup()
+				    .addComponent(periodeEssai, GroupLayout.Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE)
+				    .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
+				        .addGap(22)
+				        .addComponent(Duree, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
+				        .addGap(26)))
+				.addGroup(thisLayout.createParallelGroup()
+				    .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
+				        .addGroup(thisLayout.createParallelGroup()
+				            .addComponent(jLabel4, GroupLayout.Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 58, GroupLayout.PREFERRED_SIZE)
+				            .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
+				                .addComponent(jLabel5, GroupLayout.PREFERRED_SIZE, 51, GroupLayout.PREFERRED_SIZE)
+				                .addGap(7))
+				            .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
+				                .addComponent(jLabel6, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE)
+				                .addGap(13))
+				            .addComponent(horaire, GroupLayout.Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 58, GroupLayout.PREFERRED_SIZE)
+				            .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
+				                .addComponent(jLabel7, GroupLayout.PREFERRED_SIZE, 51, GroupLayout.PREFERRED_SIZE)
+				                .addGap(7))
+				            .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
+				                .addComponent(jLabel8, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
+				                .addGap(21))
+				            .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
+				                .addComponent(jLabel9, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
+				                .addGap(21)))
+				        .addGap(48)
+				        .addComponent(annulerButton, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+				        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 0, Short.MAX_VALUE))
+				    .addGroup(thisLayout.createSequentialGroup()
+				        .addGap(7)
+				        .addGroup(thisLayout.createParallelGroup()
+				            .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
 				                .addComponent(validerButton, GroupLayout.PREFERRED_SIZE, 78, GroupLayout.PREFERRED_SIZE)
 				                .addGroup(thisLayout.createParallelGroup()
-				                    .addComponent(conges, GroupLayout.Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
-				                    .addComponent(repos, GroupLayout.Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
-				                    .addComponent(lieu, GroupLayout.Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
-				                    .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
-				                        .addGap(0, 25, GroupLayout.PREFERRED_SIZE)
-				                        .addComponent(annulerButton, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)))
-				                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)))))
-				.addContainerGap());
+				                    .addGroup(thisLayout.createSequentialGroup()
+				                        .addComponent(salaire, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE))
+				                    .addGroup(thisLayout.createSequentialGroup()
+				                        .addComponent(conges, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE))
+				                    .addGroup(thisLayout.createSequentialGroup()
+				                        .addComponent(horraire, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE))
+				                    .addGroup(thisLayout.createSequentialGroup()
+				                        .addComponent(repos, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE))
+				                    .addGroup(thisLayout.createSequentialGroup()
+				                        .addComponent(fonction, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE))
+				                    .addGroup(thisLayout.createSequentialGroup()
+				                        .addComponent(debut, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE))
+				                    .addGroup(thisLayout.createSequentialGroup()
+				                        .addComponent(lieu, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)))
+				                .addGap(0, 0, Short.MAX_VALUE))
+				            .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
+				                .addComponent(dureejours, GroupLayout.PREFERRED_SIZE, 161, GroupLayout.PREFERRED_SIZE)
+				                .addGap(0, 20, Short.MAX_VALUE))
+				            .addGroup(GroupLayout.Alignment.LEADING, thisLayout.createSequentialGroup()
+				                .addComponent(periodeessai, GroupLayout.PREFERRED_SIZE, 150, GroupLayout.PREFERRED_SIZE)
+				                .addGap(0, 31, Short.MAX_VALUE)))))
+				.addContainerGap(19, 19));
 			thisLayout.linkSize(SwingConstants.HORIZONTAL, new Component[] {validerButton, annulerButton});
-		
+			}
+
 			pack();
 			this.setSize(617, 448);
 		} catch (Exception e) {
