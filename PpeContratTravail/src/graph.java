@@ -156,7 +156,7 @@ public class graph extends javax.swing.JFrame implements ActionListener {
 			}
 			{
 				ComboBoxModel contratComboModel = new DefaultComboBoxModel(
-				new String[] { "CDD", "CDI", "INTERIM/TEMPORAIRE", "STAGE" });
+				new String[] { "CDD", "CDI", "INTERIM/TEMPORAIRE" });
 				contratCombo = new JComboBox();
 				contratCombo.setModel(contratComboModel);
 				contratCombo.getSelectedItem().toString();

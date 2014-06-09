@@ -100,18 +100,34 @@ public class interieurContrat extends graph{
 			+"\n"
 			;
 			}
-			if(gr.getComboBox() == "STAGE"){
-				textmid = "";
-			}
+			/*if(gr.getComboBox() == "STAGE"){
+				textmid = ""
+						+ "";
+			}*/
 			
 			if(gr.getComboBox() == "INTERIM/TEMPORAIRE"){
 				textmid = "Article 1 – Objet du contrat\n\n"
 						+"Le présent contrat est proposé à "+ gr.getNom().getText()+ " , qui l’accepte, en qualité de personnel temporaire"
 						+"pour assurer les fonctions de "+gr.getFonction().getText()+" .\n\n"
 						+"Article 2 – Durée du contrat, période probatoire et résiliation\n\n"
-						+ "Le présent contrat est conclu pour la période du " +gr.getQuand().getText()+ " pour une durée de "+gr.getDuree().getText()+ "."
-						+ "";
-			}
+						+"Le présent contrat est conclu pour la période du " +gr.getQuand().getText()+ " pour une durée de "+gr.getDuree().getText()+ ".\n\n"
+						+"Salaire\n\n"
+						+"Le travailleur touche un salaire horaire brut de "+gr.getSalaire().getText()+" euros au minimum \n"
+						+"Le salaire est versé à la fin du mois \n\n"
+						+"Temps d’essai\n\n"
+						+"Un temps d’essai de "+gr.getEssai().getText()+"peut être prévu pour des missions de durée déterminée\n\n"
+						+"Contrat de mission\n\n"
+						+"Le contrat de mission règle :\n"
+						+ "– le genre de travail à accomplir\n"
+						+ "– le lieu de travail\n"
+						+ "– le début de la mission\n"
+						+ "– la durée de la mission en cas de durée déterminée et / ou le délai de congé\n"
+						+ "– l’horaire de travail\n"
+						+ "– le salaire\n"
+						+ "– év. le 13e mois de salaire pro rata temporis, les allocations et les frais.\n\n"
+						+ "Vacances\n\n"
+						+ "Le travailleur a en principe droit à "+gr.getConges().getText()+" jours de vacances annuelles payées, calculées pro rata temporis si l’année n’est pas complète.\n"
+			;}
 	}
 	// getter setter
 
